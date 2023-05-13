@@ -6,8 +6,16 @@
     width: 125px; 
     height: 100px; 
     align-items: center;
-  }
   
+  }
+.picture{
+  background-color: rgb(7, 167, 236);
+  margin: auto;
+  border-radius: 25%;
+  margin-top: 50px;
+
+}
+
 p {
     font-size: medium;
     align-items: center; 
@@ -34,6 +42,7 @@ input, select {
     font-family: sans-serif;
     margin-left: 20%;
     margin-right: 20%;
+    background-color: bisque;
 }
 .sidebyside{
     display: flex;
@@ -69,25 +78,13 @@ input, select {
   }
   
   .motivator {
-    animation: moveLeftRight 2s ease-in-out infinite, flash 1s ease-in-out infinite;
+    animation: moveLeftRight 2s ease-in-out infinite;
+  
   }
-  .left-image,
-.right-image {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-}
-
-.left-image {
-  left: 0;
-  background: url('https://static.thenounproject.com/png/3558856-200.png') no-repeat center;
-  background-size: contain;
-}
-
-.right-image {
-  right: 0;
-  background: url('https://static.thenounproject.com/png/3558856-200.png') no-repeat center;
-  background-size: contain;
-}
+  .picture{
+    animation: flash 8s ease-in-out infinite;
+    ;
+  }
+  
 
   

@@ -40,11 +40,11 @@
 
       <div class="sidebyside">
         <div class="item">
-          <p class="question">Annual Property Tax</p>
+          <p class="question">Annaul Property Tax</p>
           <input type="text" placeholder="$" id="propertyTax" />
         </div>
         <div class="item">
-          <p class="question">Annual Home Insurance</p>
+          <p class="question">Annaul Home Insurance</p>
           <input
             type="text"
             name="homeinsurance"
@@ -53,15 +53,27 @@
           />
         </div>
       </div>
-
-      <div>
-        <p class="question">VA Funding Fee</p>
-        <select name="fundingfee" id="fundingFee">
-          <option value="">select an option</option>
-          <option value="1.5">1.5%</option>
-          <option value="1.25">1.25%</option>
-        </select>
+      <div class="sidebyside">
+        <div class="item">
+          <p class="question">VA funding Fee</p>
+          <select name="fundingfee" id="fundingFee">
+            <option value="">select an option</option>
+            <option value="1.5">1.5%</option>
+            <option value="1.25">1.25%</option>
+          </select>
+  
+        </div>
+        <div class="item">
+          <p class="question">Loan Term</p>
+          <select name="fundingfee" id="loanTerm">
+            <option value="">select an option</option>
+            <option value="30">30yrs</option>
+            <option value="15">15yrs</option>
+          </select>
+  
+        </div>
       </div>
+
       <div class="sidebyside center">
         <button type="submit" class="submit">Submit</button>
         <button class="reset">Reset</button>

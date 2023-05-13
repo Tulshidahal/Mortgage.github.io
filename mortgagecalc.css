@@ -1,0 +1,93 @@
+
+.question { font-style: italic; 
+    font-size: large;
+}    
+.heading img {
+    width: 125px; 
+    height: 100px; 
+    align-items: center;
+  }
+  
+p {
+    font-size: medium;
+    align-items: center; 
+}
+input, select {
+    border: 5m;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border-color: lightgray;
+
+}
+ .submit, .reset {
+    background-color: aqua;
+    margin: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    border-color: none;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+} 
+.body{
+    font-family: sans-serif;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.sidebyside{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    margin-right: 20px;
+    width: 100%;
+}
+.center{
+    justify-content: center;
+}
+@keyframes moveLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes flash {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  
+  }
+  
+  .motivator {
+    animation: moveLeftRight 2s ease-in-out infinite, flash 1s ease-in-out infinite;
+  }
+  .left-image,
+.right-image {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+
+.left-image {
+  left: 0;
+  background: url('https://static.thenounproject.com/png/3558856-200.png') no-repeat center;
+  background-size: contain;
+}
+
+.right-image {
+  right: 0;
+  background: url('https://static.thenounproject.com/png/3558856-200.png') no-repeat center;
+  background-size: contain;
+}
+
+  

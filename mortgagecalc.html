@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mortgagecalc.css" />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <div class="left-image"></div>
+    <div class="right-image"></div>
+ 
+    <h1 class="heading"> Mortgage 
+      <img src="https://static.thenounproject.com/png/3558856-200.png" > 
+      Calculator</h1>
+
+    <h2 class="motivator">Lets get you GOING!</h2>
+    <form id="calculator">
+      <div class="sidebyside">
+        <div class="item">
+          <p class="question">Home Price $</p>
+          <input type="text" name="homePrice" id="homePrice" />
+        </div>
+        <div class="item">
+          <p class="question">Down Payment</p>
+          <input type="text" name="downpayment" id="downPayment" />
+        </div>
+      </div>
+      <div class="sidebyside">
+        <div class="item">
+          <p class="question">Loan Amount</p>
+          <input type="text" placeholder="$" id="loanAmount" />
+        </div>
+        <div class="item">
+          <p class="question">Interest Rate</p>
+          <input type="text" placeholder="%" id="interestRate" />
+        </div>
+      </div>
+
+      <div class="sidebyside">
+        <div class="item">
+          <p class="question">Property Tax</p>
+          <input type="text" placeholder="$" id="propertyTax" />
+        </div>
+        <div class="item">
+          <p class="question">Home Insurance</p>
+          <input
+            type="text"
+            name="homeinsurance"
+            placeholder="$"
+            id="homeInsurance"
+          />
+        </div>
+      </div>
+
+      <div>
+        <p class="question">VA Funding Fee</p>
+        <select name="fundingfee" id="fundingFee">
+          <option value="">select an option</option>
+          <option value="1.5">1.5%</option>
+          <option value="1.25">1.25%</option>
+        </select>
+      </div>
+      <div class="sidebyside center">
+        <button type="submit" class="submit">Submit</button>
+        <button class="reset">Reset</button>
+      </div>
+    </form>
+    <div id="results">
+
+    </div>
+    <script src = "mortgagecalc.js"></script>
+  </body>
+</html>

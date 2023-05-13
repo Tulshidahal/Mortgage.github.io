@@ -2,9 +2,8 @@
     "name": "mortgagecalculator",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
-      "start": "parcel index.html",
+      "start": "index.html",
       "build": "parcel build index.html",
       "test": "jest --watchAll"
     },

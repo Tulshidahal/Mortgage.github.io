@@ -5,6 +5,7 @@ form.addEventListener('submit', (event) => {
   const homePrice = parseFloat(document.getElementById("homePrice").value);
   const downPayment = parseFloat(document.getElementById("downPayment").value);
   const loanAmount = homePrice - downPayment;
+  document.getElementById("loanAmount").value = loanAmount
   const interestRate = parseFloat(document.getElementById("interestRate").value);
   const propertyTax = parseFloat(document.getElementById("propertyTax").value);
   const homeInsurance = parseFloat(document.getElementById("homeInsurance").value);

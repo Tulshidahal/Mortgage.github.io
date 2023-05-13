@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "npm run build", "use": "@vercel/static-build" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/dist/$1" }
+    ]
+  }
+  

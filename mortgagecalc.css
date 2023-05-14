@@ -1,90 +1,99 @@
-
-.question { font-style: italic; 
-    font-size: large;
-}    
+.question {
+  font-style: italic;
+  font-size: large;
+}
 .heading img {
-    width: 125px; 
-    height: 100px; 
-    align-items: center;
-  
-  }
-.picture{
+  width: 125px;
+  height: 100px;
+  align-items: center;
+}
+.picture {
   background-color: rgb(7, 167, 236);
   margin: auto;
   border-radius: 25%;
   margin-top: 50px;
-
 }
 
 p {
-    font-size: medium;
-    align-items: center; 
+  font-size: medium;
+  align-items: center;
 }
-input, select {
-    border: 5m;
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-    border-color: lightgray;
-
+input,
+select {
+  border: 5m;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border-color: lightgray;
 }
- .submit, .reset {
-    background-color: aqua;
-    margin: 10px;
-    cursor: pointer;
-    padding: 1rem;
-    border-color: none;
-    border-radius: 20px;
-    width: 50%;
-    text-align: center;
-} 
-.body{
-    font-family: sans-serif;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: bisque;
+.submit,
+.reset {
+  background-color: aqua;
+  margin: 10px;
+  cursor: pointer;
+  padding: 1rem;
+  border-color: none;
+  border-radius: 20px;
+  width: 50%;
+  text-align: center;
 }
-.sidebyside{
-    display: flex;
-    flex-direction: row;
+.body {
+  font-family: sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: bisque;
 }
-.item{
-    margin-right: 20px;
-    width: 100%;
+.sidebyside {
+  display: flex;
+  flex-direction: row;
 }
-.center{
-    justify-content: center;
+.item {
+  margin-right: 20px;
+  width: 100%;
+}
+.center {
+  justify-content: center;
 }
 @keyframes moveLeftRight {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(20px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  @keyframes flash {
-    0%, 50%, 100% {
-      opacity: 1;
-    }
-    25%, 75% {
-      opacity: 0;
-    }
-  
+  50% {
+    transform: translateX(20px);
   }
-  
-  .motivator {
-    animation: moveLeftRight 2s ease-in-out infinite;
-  
+  100% {
+    transform: translateX(0);
   }
-  .picture{
-    animation: flash 8s ease-in-out infinite;
-    ;
-  }
-  
+}
 
-  
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.motivator {
+  animation: moveLeftRight 2s ease-in-out infinite;
+}
+.picture {
+  animation: flash 8s ease-in-out infinite;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  background-color: #f2f2f2;
+}
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}

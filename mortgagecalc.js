@@ -77,14 +77,14 @@ form.addEventListener('submit', (event) => {
 });
 
 function getFromLocalStrage() {
-  document.getElementById("homePrice").value = localStorage.getItem("homePrice");
-  document.getElementById("downPayment").value = localStorage.getItem("downPayment");
-  document.getElementById("loanAmount").value = localStorage.getItem("loanAmount");
-  document.getElementById("interestRate").value = localStorage.getItem("interestRate");
-  document.getElementById("propertyTax").value = localStorage.getItem("propertyTax");
-  document.getElementById("homeInsurance").value = localStorage.getItem("homeInsurance");
-  document.getElementById("fundingFee").value = localStorage.getItem("fundingFee");
-  document.getElementById("loanTerm").value = localStorage.getItem("loanTerm");
+  document.getElementById("homePrice").value = localStorage.getItem("homePrice") || '';
+  document.getElementById("downPayment").value = localStorage.getItem("downPayment") || '';
+  document.getElementById("loanAmount").value = localStorage.getItem("loanAmount") || '';
+  document.getElementById("interestRate").value = localStorage.getItem("interestRate") || '';
+  document.getElementById("propertyTax").value = localStorage.getItem("propertyTax") || '';
+  document.getElementById("homeInsurance").value = localStorage.getItem("homeInsurance") || '';
+  document.getElementById("fundingFee").value = localStorage.getItem("fundingFee") || '';
+  document.getElementById("loanTerm").value = localStorage.getItem("loanTerm") || '';
 
 
 

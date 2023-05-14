@@ -94,7 +94,7 @@ resetButton.addEventListener('click', () => {
 
     // Clear the results div
     const results = document.getElementById("results");
-    results.innerHTML = "resetButton";
+    results.innerHTML = "";
 
     // Clear local storage
     localStorage.removeItem("homePrice");

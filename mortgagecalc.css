@@ -116,5 +116,10 @@ th {
   .picture {
     margin: auto;
     width: auto;
+    float: right;
+    align-items: 10px;
+    animation: moveLeftRight 2s ease-in-out infinite;
+
   }
+  
 }

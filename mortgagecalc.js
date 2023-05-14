@@ -94,7 +94,7 @@ resetButton.addEventListener('click', () => {
 
     // Clear the results div
     const results = document.getElementById("results");
-    results.innerHTML = "";
+    results.innerHTML = "resetButton";
 
     // Clear local storage
     localStorage.removeItem("homePrice");
@@ -106,4 +106,4 @@ resetButton.addEventListener('click', () => {
     localStorage.removeItem("fundingFee");
     localStorage.removeItem("loanTerm");
 });
-
+    

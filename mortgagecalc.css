@@ -3,7 +3,7 @@
   font-size: large;
 }
 .heading img {
-  width: 125px;
+  width: auto;
   height: 100px;
   align-items: center;
 }
@@ -47,6 +47,10 @@ select {
   display: flex;
   flex-direction: row;
 }
+.sidebysideButton {
+  display: flex;
+  flex-direction: row;
+}
 .item {
   margin-right: 20px;
   width: 100%;
@@ -87,13 +91,29 @@ select {
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: blueviolet;
+  color: bisque;
 }
 th {
   text-align: left;
-  background-color: #f2f2f2;
+  background-color: blueviolet;
 }
 td,
 th {
   border: 1px solid #ddd;
   padding: 8px;
+}
+
+/* Mobile only */
+@media screen and (max-width: 600px) {
+  .body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .sidebyside {
+    flex-direction: column;
+  }
+  .picture {
+    margin: auto;
+  }
 }

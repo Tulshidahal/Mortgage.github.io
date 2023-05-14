@@ -1,11 +1,31 @@
 const form = document.getElementById("calculator");
+
+const homePrice = homePriceValue();
+const downPayment = downPaymentValue();
+const loanAmount = homePrice - downPayment;
+
+document.getElementsByName("homePrice")[0].addEventListener('change', homePriceValue);
+document.getElementsByName("downPayment")[0].addEventListener('change', downPaymentValue);
+
+/* Function */
+function homePriceValue(){
+    const homePrice1 = parseFloat(document.getElementById("homePrice").value);
+    return homePrice1;
+}
+
+function downPaymentValue(){
+  const dp = parseFloat(document.getElementById("downPayment").value);
+  if (homePriceValue() > 0) (
+    document.getElementById("loanAmount").value = (homePriceValue() || 0) - (dp || 0)
+  )
+  return dp;
+}
+
+document.getElementById("loanAmount").value = ''
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  
-  const homePrice = parseFloat(document.getElementById("homePrice").value);
-  const downPayment = parseFloat(document.getElementById("downPayment").value);
-  const loanAmount = homePrice - downPayment;
-  document.getElementById("loanAmount").value = loanAmount
+
   const interestRate = parseFloat(document.getElementById("interestRate").value);
   const propertyTax = parseFloat(document.getElementById("propertyTax").value);
   const homeInsurance = parseFloat(document.getElementById("homeInsurance").value);

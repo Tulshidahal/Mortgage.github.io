@@ -1,14 +1,24 @@
 .question {
-  font-style: italic;
+  font-style: normal;
   font-size: large;
+  color: rgb(13, 13, 24);
+  font-weight: bold;
+  margin-top: auto;
 }
+
 .heading img {
   width: auto;
   height: 100px;
-  align-items: center;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.heading{
+margin-left: 80px;
 }
 .picture {
-  background-color: rgb(7, 167, 236);
+  background-color: rgb(216, 158, 81);
   margin: auto;
   border-radius: 25%;
   margin-top: 50px;
@@ -16,48 +26,70 @@
 
 p {
   font-size: medium;
-  align-items: center;
+  text-align: center;
 }
+
 input,
 select {
-  border: 5m;
+  border: 5px;
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  border-color: lightgray;
+  border-color: rgb(179, 96, 96);
 }
+
 .submit,
 .reset {
-  background-color: aqua;
+  background-color: rgb(91, 36, 123);
   margin: 10px;
   cursor: pointer;
   padding: 1rem;
-  border-color: none;
-  border-radius: 20px;
+  border: none;
+  border-radius: 50px;
   width: 50%;
   text-align: center;
+  color: rgb(162, 127, 127);
 }
+
+.tinyPics {
+  
+  border-radius: 80%;
+  margin-left: 20px;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom:auto;
+}
+
 .body {
+  background-image: url(https://images.wsj.net/im-379566?size=custom_1300x1300);
+  background-position: center;
+  background-size: cover;
   font-family: sans-serif;
   margin-left: 20%;
   margin-right: 20%;
   background-color: bisque;
 }
+
 .sidebyside {
   display: flex;
   flex-direction: row;
 }
+
 .sidebysideButton {
   display: flex;
   flex-direction: row;
 }
+
 .item {
   margin-right: 20px;
   width: 100%;
 }
+
 .center {
   justify-content: center;
 }
+
 @keyframes moveLeftRight {
   0% {
     transform: translateX(0);
@@ -85,41 +117,63 @@ select {
 .motivator {
   animation: moveLeftRight 2s ease-in-out infinite;
 }
+
 .picture {
   animation: flash 8s ease-in-out infinite;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: blueviolet;
-  color: bisque;
+  background-color: rgb(230, 97, 97);
+  color: rgb(69, 50, 26);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 th {
-  text-align: left;
-  background-color: blueviolet;
+  text-align: center;
+  background-color: rgb(247, 183, 183);
 }
+
 td,
 th {
-  border: 1px solid #ddd;
+  border: 1px solid #3a0101;
   padding: 8px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: blue;
 }
 
 /* Mobile only */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 741px) {
   .body {
     margin-left: 5%;
     margin-right: 5%;
+    background-image: url(https://images.wsj.net/im-379566?size=custom_1300x1300);
+    background-position: center;
+    background-size: cover;
   }
+
   .sidebyside {
     flex-direction: column;
   }
+
   .picture {
     margin: auto;
     width: auto;
     float: right;
     align-items: 10px;
     animation: moveLeftRight 2s ease-in-out infinite;
-
   }
-  
+.tinyPics{
+  border-radius: 110%;
+  margin-left: 50px;
+  width: 100px;
+  height: auto;
+  margin-top: auto;
+  border: 110%;
 }

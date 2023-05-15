@@ -33,10 +33,10 @@ form.addEventListener('submit', (event) => {
     const loanTerm = parseFloat(document.getElementById("loanTerm").value);
     const monthlyInterestRate = interestRate / (12 * 100);
     const loanTermInMonths = loanTerm * 12;
-    const FundingFee$ = (fundingFee / 100) * loanAmount;
+    //const FundingFee$ = (fundingFee / 100) * loanAmount;
     const monthlyPayment = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermInMonths)) / (Math.pow(1 + monthlyInterestRate, loanTermInMonths) - 1);
-    const actualMonthlyPayment = monthlyPayment + (propertyTax / 12) + (homeInsurance / 12) + (FundingFee$ / loanTermInMonths);
-    const totalMoneySpend = monthlyPayment * loanTermInMonths;
+    const actualMonthlyPayment = monthlyPayment + (propertyTax / 12) + (homeInsurance / 12); //+ (FundingFee$ / loanTermInMonths);
+    const totalMoneySpend = actualMonthlyPayment * loanTermInMonths;
 
     localStorage.setItem("homePrice", homePrice);
     localStorage.setItem("downPayment", downPayment);

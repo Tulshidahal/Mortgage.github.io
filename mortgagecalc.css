@@ -157,7 +157,7 @@ button:hover {
 }
 
 /* Mobile only */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .form {
     margin-left: 5%;
     margin-right: 5%;

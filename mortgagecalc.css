@@ -157,7 +157,11 @@ button:hover {
 }
 
 /* Mobile only */
-@media screen and (max-width: 741px) {
+@media screen 
+and (device-width : 741px)
+and(device-height : 926px) 
+and (orientation : portrait)
+{
   .form {
     margin-left: 5%;
     margin-right: 5%;
@@ -182,4 +186,5 @@ button:hover {
     margin-top: auto;
     border: 110%; 
   }*/
+
 }

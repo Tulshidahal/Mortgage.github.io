@@ -33,42 +33,47 @@ form.addEventListener('submit', (event) => {
     const loanTerm = parseFloat(document.getElementById("loanTerm").value);
     const monthlyInterestRate = interestRate / (12 * 100);
     const loanTermInMonths = loanTerm * 12;
-    //const FundingFee$ = (fundingFee / 100) * loanAmount;
+    const FundingFee$ = fundingFee ? (fundingFee / 100) * loanAmount : 0;
+    console.log(FundingFee$)
     const monthlyPayment = (loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermInMonths)) / (Math.pow(1 + monthlyInterestRate, loanTermInMonths) - 1);
-    const actualMonthlyPayment = monthlyPayment + (propertyTax / 12) + (homeInsurance / 12); //+ (FundingFee$ / loanTermInMonths);
+    const actualMonthlyPayment = monthlyPayment + (propertyTax / 12) + (homeInsurance / 12) + (FundingFee$ / loanTermInMonths);
     const totalMoneySpend = actualMonthlyPayment * loanTermInMonths;
 
-    localStorage.setItem("homePrice", homePrice);
-    localStorage.setItem("downPayment", downPayment);
-    localStorage.setItem("loanAmount", loanAmount);
-    localStorage.setItem("interestRate", interestRate);
-    localStorage.setItem("propertyTax", propertyTax);
-    localStorage.setItem("homeInsurance", homeInsurance);
-    localStorage.setItem("fundingFee", fundingFee);
-    localStorage.setItem("loanTerm", loanTerm);
+    localStorage.setItem("homePrice", homePrice || '');
+    localStorage.setItem("downPayment", downPayment || '');
+    localStorage.setItem("loanAmount", loanAmount || '');
+    localStorage.setItem("interestRate", interestRate || '');
+    localStorage.setItem("propertyTax", propertyTax || '');
+    localStorage.setItem("homeInsurance", homeInsurance || '');
+    localStorage.setItem("fundingFee", fundingFee || '');
+    localStorage.setItem("loanTerm", loanTerm || '');
 
     const results = document.getElementById("results");
     results.innerHTML = `
         <table>
             <tr>
                 <th>Home Price</th>
-                <td>$${homePrice.toFixed(2)}</td>
+                <td>$${homePrice.toFixed(2) || 0}</td>
             </tr>
             <tr>
                 <th>Down Payment</th>
-                <td>$${downPayment.toFixed(2)}</td>
+                <td>$${downPayment.toFixed(2) || 0}</td>
             </tr>
             <tr>
                 <th>Loan Amount</th>
-                <td>$${loanAmount.toFixed(2)}</td>
+                <td>$${(Number(FundingFee$)+Number(loanAmount.toFixed(2))) || 0} ${FundingFee$ > 0 ? '*** VA Funding Fee is added***' : ''}</td>
             </tr>
+            ${FundingFee$ > 0 ? `<tr>
+            <th>VA Funding Fee</th>
+            <td>$${(FundingFee$.toFixed(2))}</td>
+        </tr>` : ''}
             <tr>
                 <th>Monthly Payment</th>
-                <td>$${actualMonthlyPayment.toFixed(2)}</td>
+                <td>$${actualMonthlyPayment ? actualMonthlyPayment.toFixed(2) : 0.00}</td>
             </tr>
             <tr>
                 <th>Total Money Spent</th>
-                <td>$${totalMoneySpend.toFixed(2)}</td>
+                <td>$${totalMoneySpend ? totalMoneySpend.toFixed(2) : 0.00}</td>
             </tr>
         </table>`;
 });

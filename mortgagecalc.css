@@ -1,32 +1,44 @@
+.body {
+  /* background-image: url(https://images.wsj.net/im-379566?size=custom_1300x1300); */
+  background-position: center;
+  background-size: cover;
+  font-family: sans-serif;
+  background-color: bisque;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+.form {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .question {
   font-style: normal;
   font-size: large;
   color: rgb(13, 13, 24);
   font-weight: bold;
-  margin-top: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.heading img {
-  width: auto;
-  height: 100px;
-  margin: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.heading{
-margin-left: 80px;
+.heading {
+  margin-left: 10px;
 }
 .picture {
   background-color: rgb(216, 158, 81);
-  margin: auto;
-  border-radius: 25%;
-  margin-top: 50px;
-}
-
-p {
-  font-size: medium;
-  text-align: center;
+  border-radius: 10px;
+  height: 80px;
+  width: auto;
 }
 
 input,
@@ -36,11 +48,16 @@ select {
   height: 40px;
   border-radius: 20px;
   border-color: rgb(179, 96, 96);
+  padding-left: 10px;
+}
+
+select {
+  height: 45px;
 }
 
 .submit,
 .reset {
-  background-color: rgb(91, 36, 123);
+  background-color: rgb(2 1 4);
   margin: 10px;
   cursor: pointer;
   padding: 1rem;
@@ -48,27 +65,21 @@ select {
   border-radius: 50px;
   width: 50%;
   text-align: center;
-  color: rgb(162, 127, 127);
+  color: rgb(255 255 255);
+  font-size: 16px;
+}
+
+.reset {
+  background-color: rgb(118 118 118);
 }
 
 .tinyPics {
-  
   border-radius: 80%;
   margin-left: 20px;
   width: 80px;
   height: 30px;
   margin-top: 10px;
-  margin-bottom:auto;
-}
-
-.body {
-  background-image: url(https://images.wsj.net/im-379566?size=custom_1300x1300);
-  background-position: center;
-  background-size: cover;
-  font-family: sans-serif;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: bisque;
+  margin-bottom: auto;
 }
 
 .sidebyside {
@@ -116,16 +127,13 @@ select {
 
 .motivator {
   animation: moveLeftRight 2s ease-in-out infinite;
-}
-
-.picture {
-  animation: flash 8s ease-in-out infinite;
+  margin-top: -20px;
+  text-align: center;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: rgb(230, 97, 97);
   color: rgb(69, 50, 26);
   display: flex;
   flex-direction: column;
@@ -150,30 +158,28 @@ button:hover {
 
 /* Mobile only */
 @media screen and (max-width: 741px) {
-  .body {
+  .form {
     margin-left: 5%;
     margin-right: 5%;
-    background-image: url(https://images.wsj.net/im-379566?size=custom_1300x1300);
-    background-position: center;
-    background-size: cover;
   }
 
   .sidebyside {
     flex-direction: column;
   }
-
   .picture {
-    margin: auto;
-    width: auto;
-    float: right;
-    align-items: 10px;
-    animation: moveLeftRight 2s ease-in-out infinite;
+    margin-left: 10px;
   }
-.tinyPics{
-  border-radius: 110%;
-  margin-left: 50px;
-  width: 100px;
-  height: auto;
-  margin-top: auto;
-  border: 110%;
+
+  .question {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .tinyPics {
+    border-radius: 110%;
+    margin-left: 50px;
+    width: 100px;
+    height: auto;
+    margin-top: auto;
+    border: 110%;
+  }
 }

@@ -1,103 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="google-site-verification" content="-niG5JgM8yzc5rYPQHgOa_zEkRtEjnlwPjKN8GOKOsU" />
+    <meta
+      name="google-site-verification"
+      content="-niG5JgM8yzc5rYPQHgOa_zEkRtEjnlwPjKN8GOKOsU"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="mortgagecalc.css" />
-    <title>Online Mortgage Calculator - Calculate Your Monthly Payments Instantly</title>
-    <meta name="description" content="Calculate your mortgage payments easily with our online calculator. Input your home price, down payment, interest rate, and more to get an accurate monthly payment and total cost. Plan your home purchase today with our user-friendly tool." />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YHRXDYBDCB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>
+      Online Mortgage Calculator - Calculate Your Monthly Payments Instantly
+    </title>
+    <meta
+      name="description"
+      content="Calculate your mortgage payments easily with our online calculator. Input your home price, down payment, interest rate, and more to get an accurate monthly payment and total cost. Plan your home purchase today with our user-friendly tool."
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YHRXDYBDCB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-YHRXDYBDCB');
-</script>
+      gtag("config", "G-YHRXDYBDCB");
+    </script>
   </head>
-  <body class="body" 
-    <div class="left-image"></div>
-    <div class="right-image"></div>
-
- 
-    <h1 class="heading"> Mortgage     
-      <img class = "picture" src="https://static.thenounproject.com/png/3558856-200.png"  > 
-             Calculator</h1>
-
-    <h2 class="motivator">Lets get you GOING!</h2>
-    <form id="calculator">
-      <div class="sidebyside">
-        <div class="item">
-          <p class="question">Home Price<img class = "tinyPics" src="https://www.prohousesellers.com/s/cc_images/teaserbox_902467022.gif?t=1557418681"> </p>
-          <input type="text" name="homePrice" id="homePrice" />
-        </div>
-        <div class="item">
-          <p class="question">Down Payment <img class = "tinyPics" src="https://gifdb.com/images/high/mr-krabs-pulling-out-money-from-pile-56kxt6w0aowf80z3.webp">   </p>
-          <input type="text" name="downPayment" id="downPayment" />
+  <body class="body">
+    <div class="header">
+      <div class="nav">
+        <img
+          class="picture"
+          src="https://static.thenounproject.com/png/3558856-200.png"
+        />
+        <div>
+          <h1 class="heading">Mortgage Calculator</h1>
+          <h2 class="motivator">Lets get you GOING!</h2>
         </div>
       </div>
-      <div class="sidebyside">
-        <div class="item">
-          <p class="question">Loan Amount<img class = "tinyPics" src="https://i.pinimg.com/originals/41/b0/08/41b008395e8e7f888666688915750d1f.gif"> </p>
-          <input type="text" placeholder="$" id="loanAmount" />
-        </div>
-        <div class="item">
-          <p class="question">Interest Rate <img class = "tinyPics" class="pic" src="https://www.if.org.uk/wp-content/uploads/2014/05/Housing-interest-rates-300x225.jpg"></p>
-          <input type="text" placeholder="%" id="interestRate" />
-        </div>
-      </div>
-
-      <div class="sidebyside">
-        <div class="item">
-          <p class="question">Annaul Property Tax</p>
-          <input type="text" placeholder="$" id="propertyTax" />
-        </div>
-        <div class="item">
-          <p class="question">Annaul Home Insurance</p>
-          <input
-            type="text"
-            name="homeinsurance"
-            placeholder="$"
-            id="homeInsurance"
-          />
-        </div>
-      </div>
-      <div class="sidebyside">
-        <div class="item">
-          <p class="question">VA funding Fee</p>
-          <select name="fundingfee" id="fundingFee">
-            <option value="">select an option</option>
-            <option value="1.25">1.25%</option>
-            <option value="1.50">1.50%</option>
-            <option value="1.75">1.75%</option>
-            <option value="2.00">2.00%</option>
-            <option value="2.25">2.25%</option>
-            <option value="2.50">2.50%</option>
-          </select>
-  
-        </div>
-        <div class="item">
-          <p class="question">Loan Term</p>
-          <select name="fundingfee" id="loanTerm">
-            <option value="">select an option</option>
-            <option value="30">30yrs</option>
-            <option value="15">15yrs</option>
-          </select>
-  
-        </div>
-      </div>
-
-      <div class="sidebysideButton center">
-        <button type="submit" class="submit">Submit</button>
-        <button id = "resetButton" type= "reset" class="reset">Reset</button>
-      </div>
-    </form>
-    <div id="results">
-
     </div>
-    <script src = "mortgagecalc.js"></script>
+    <section class="form">
+      <form id="calculator">
+        <div class="sidebyside">
+          <div class="item">
+            <p class="question">Home Price</p>
+            <input
+              type="text"
+              name="homePrice"
+              id="homePrice"
+              placeholder="$"
+            />
+          </div>
+          <div class="item">
+            <p class="question">Down Payment</p>
+            <input
+              type="text"
+              name="downPayment"
+              id="downPayment"
+              placeholder="$"
+            />
+          </div>
+        </div>
+        <div class="sidebyside">
+          <div class="item">
+            <p class="question">Loan Amount</p>
+            <input type="text" placeholder="$" id="loanAmount" />
+          </div>
+          <div class="item">
+            <p class="question">Interest Rate</p>
+            <input type="text" placeholder="%" id="interestRate" />
+          </div>
+        </div>
+
+        <div class="sidebyside">
+          <div class="item">
+            <p class="question">Annaul Property Tax</p>
+            <input type="text" placeholder="$" id="propertyTax" />
+          </div>
+          <div class="item">
+            <p class="question">Annaul Home Insurance</p>
+            <input
+              type="text"
+              name="homeinsurance"
+              placeholder="$"
+              id="homeInsurance"
+            />
+          </div>
+        </div>
+        <div class="sidebyside">
+          <div class="item">
+            <p class="question">VA funding Fee</p>
+            <select name="fundingfee" id="fundingFee">
+              <option value="">select an option</option>
+              <option value="1.25">1.25%</option>
+              <option value="1.50">1.50%</option>
+              <option value="1.75">1.75%</option>
+              <option value="2.00">2.00%</option>
+              <option value="2.25">2.25%</option>
+              <option value="2.50">2.50%</option>
+            </select>
+          </div>
+          <div class="item">
+            <p class="question">Loan Term</p>
+            <select name="fundingfee" id="loanTerm">
+              <option value="">select an option</option>
+              <option value="30">30yrs</option>
+              <option value="15">15yrs</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sidebysideButton center">
+          <button type="submit" class="submit">Submit</button>
+          <button id="resetButton" type="reset" class="reset">Reset</button>
+        </div>
+      </form>
+      <div id="results"></div>
+    </section>
+    <script src="mortgagecalc.js"></script>
   </body>
 </html>

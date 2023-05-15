@@ -157,23 +157,23 @@ button:hover {
 }
 
 /* Mobile only */
-@media screen and (max-width: 1300px)
+@media screen and (max-width: 1300px) 
  {
   .form {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
 
   .sidebyside {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .picture {
-    margin-left: 10px;
+    margin-left: 10px !important;
   }
 
   .question {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px !important;
+    text-align: center !important;
   }
   /* .tinyPics {
     border-radius: 110%;
